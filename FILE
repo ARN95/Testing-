@@ -1,6 +1,6 @@
+this is new line
 # 2024-01-31 16:30:30 by RouterOS 7.12.1
 # software id = 7RUF-GJP2
-#
 # model = RB5009UG+S+
 # serial number = EC1B0FB2A7132222
 /interface bridge add ageing-time=5m arp=enabled arp-timeout=auto auto-mac=yes dhcp-snooping=no disabled=no fast-forward=yes igmp-snooping=no mtu=auto name="BR - 10.90.215.1@fky77" protocol-mode=none vlan-filtering=no
