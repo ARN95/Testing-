@@ -1,0 +1,13 @@
+NTP:
+timeout 20s sshpass -p $password ssh $sshpara -o "UserKnownHostsFile /dev/null" -o ConnectTimeout=10 -n -o "StrictHostKeyChecking no" $user@$brip '/system ntp client set enabled=yes servers=37.236.221.6,37.237.71.2;/system clock set time-zone-name=Asia/Baghdad'
+
+timeout 20s sshpass -p $pass ssh $sshpara -o "UserKnownHostsFile /dev/null" -o ConnectTimeout=10 -n -o "StrictHostKeyChecking no" $user@$brip '/system ntp client set enabled=yes primary-ntp=37.236.221.6 secondary-ntp=37.237.71.2;/system clock set time-zone-name=Asia/Baghdad;'
+
+
+-----------------------------------------------------
+
+Syslog Prefix:
+timeout 80 sshpass -p $password ssh -o "UserKnownHostsFile /dev/null" -o ConnectTimeout=10 -o "StrictHostKeyChecking no" $user@$entry "/system/logging/ set [find action=remote] prefix=MikroTik"
+
+-----------------------------------------------------
+
